@@ -1,11 +1,11 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap( void ): _name( "Unnamed" ), _hp( 10 ), _energy( 10 ), _atk( 0 ) {
-	std::cout << CYN << "ClapTrap Unnamed has entered" << RES << std::endl;
+	std::cout << CYN << "ClapTrap Unnamed has created" << RES << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name ): _name( name ), _hp( 10 ), _energy( 10 ), _atk( 0 ) {
-	std::cout << CYN << "ClapTrap " << name << "has entered" << RES << std::endl;
+	std::cout << CYN << "ClapTrap " << name << "has created" << RES << std::endl;
 }
 
 ClapTrap::ClapTrap( ClapTrap const &src ) {
@@ -13,7 +13,7 @@ ClapTrap::ClapTrap( ClapTrap const &src ) {
 }
 
 ClapTrap::~ClapTrap( void ) {
-	std::cout << RED << "ClapTrap " << this->_name << " left" << RES << std::endl;
+	std::cout << RED << "ClapTrap " << this->_name << " is destroyed" << RES << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=( ClapTrap const & src ) {

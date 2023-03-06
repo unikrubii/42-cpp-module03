@@ -6,12 +6,18 @@ int main( void ) {
 	std::cout << std::endl;
 
 	sc1.attack( "sc2" );
-	sc2.takeDamage( 3 );
-	sc2.beRepaired( 5 );
+	sc2.takeDamage( 20 );
+	sc2.beRepaired( 15 );
+
+	std::cout << std::endl;
+
+	sc1.beRepaired( 10 );
 
 	std::cout << std::endl;
 
 	sc1.guardGate();
+	
+	std::cout << std::endl;
 	
 	return 0;
 }
