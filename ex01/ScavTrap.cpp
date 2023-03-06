@@ -1,10 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap( std::string name ): ClapTrap( name, false ) {
-	std::cout << CYN << "ScavTrap " << name << " has entered" << RES << std::endl;
-}
-
-ScavTrap::ScavTrap( std::string name, int hp, int energy, int atk ): ClapTrap( name, hp, energy, atk, false ) {
+ScavTrap::ScavTrap( std::string name ): ClapTrap( name, 100, 50, 20, false ) {
 	std::cout << CYN << "ScavTrap " << name << " has entered" << RES << std::endl;
 }
 
