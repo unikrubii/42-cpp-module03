@@ -37,10 +37,10 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 
 void ClapTrap::beRepaired( unsigned int amount ) {
 	if ( this->_hp <= 0 ) {
-		std::cout << YEL << this->_name << " is destroyed. Cannot be repaired" << RES << std::endl;
+		std::cout << YEL << "ClapTrap " << this->_name << " is destroyed. Cannot be repaired" << RES << std::endl;
 	}
 	else if ( this->_hp >= 10 ) {
-		std::cout << YEL << this->_name << " HP is full. No need to be repaired" << RES << std::endl;
+		std::cout << YEL << "ClapTrap " << this->_name << " HP is full. No need to be repaired" << RES << std::endl;
 	}
 	else {
 		std::cout << MAG << "ClapTrap " << this->_name << " recovery " << YEL << amount << MAG << " HP!" << RES << std::endl;

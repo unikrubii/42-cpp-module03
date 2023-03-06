@@ -11,10 +11,11 @@ class ClapTrap
 		int			_hp;
 		int			_energy;
 		int			_atk;
+		bool		_self;
 
 	public:
-		ClapTrap( void );
-		ClapTrap( std::string name, int hp, int energy, int atk );
+		ClapTrap( std::string name, bool self = true );
+		ClapTrap( std::string name, int hp, int energy, int atk, bool self = true );
 		ClapTrap( ClapTrap const &src );
 		~ClapTrap( void );
 

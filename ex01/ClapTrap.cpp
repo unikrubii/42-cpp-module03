@@ -1,11 +1,15 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( void ): _name( "unnamed" ), _hp( 10 ), _energy( 10 ), _atk( 3 ) {
-	std::cout << CYN << "ClapTrap unnamed has entered" << RES << std::endl;
+ClapTrap::ClapTrap( std::string name, bool self ): _name( name ), _hp( 10 ), _energy( 10 ), _atk( 3 ), _self( self ) {
+	if ( self ) {
+		std::cout << CYN << "ClapTrap " << name << " has entered" << RES << std::endl;
+	}
 }
 
-ClapTrap::ClapTrap( std::string name, int hp, int energy, int atk ): _name( name ), _hp( hp ), _energy( energy ), _atk( atk ) {
-	std::cout << CYN << "ClapTrap " << name << "has entered" << RES << std::endl;
+ClapTrap::ClapTrap( std::string name, int hp, int energy, int atk, bool self ): _name( name ), _hp( hp ), _energy( energy ), _atk( atk ), _self( self ) {
+	if ( self ) {
+		std::cout << CYN << "ClapTrap " << name << " has entered" << RES << std::endl;
+	}
 }
 
 ClapTrap::ClapTrap( ClapTrap const &src ) {
@@ -13,7 +17,9 @@ ClapTrap::ClapTrap( ClapTrap const &src ) {
 }
 
 ClapTrap::~ClapTrap( void ) {
-	std::cout << RED << "ClapTrap " << this->_name << " left" << RES << std::endl;
+	if ( this->_self ) {
+		std::cout << RED << "ClapTrap " << this->_name << " left" << RES << std::endl;
+	}
 }
 
 ClapTrap &ClapTrap::operator=( ClapTrap const & src ) {
@@ -37,10 +43,10 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 
 void ClapTrap::beRepaired( unsigned int amount ) {
 	if ( this->_hp <= 0 ) {
-		std::cout << YEL << this->_name << " is destroyed. Cannot be repaired" << RES << std::endl;
+		std::cout << YEL << "ClapTrap " << this->_name << " is destroyed. Cannot be repaired" << RES << std::endl;
 	}
 	else if ( this->_hp >= 10 ) {
-		std::cout << YEL << this->_name << " HP is full. No need to be repaired" << RES << std::endl;
+		std::cout << YEL << "ClapTrap " << this->_name << " HP is full. No need to be repaired" << RES << std::endl;
 	}
 	else {
 		std::cout << MAG << "ClapTrap " << this->_name << " recovery " << YEL << amount << MAG << " HP!" << RES << std::endl;
