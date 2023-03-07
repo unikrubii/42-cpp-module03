@@ -23,7 +23,7 @@ DiamondTrap::DiamondTrap( DiamondTrap const &src ): FragTrap( src ), ScavTrap( s
 }
 
 DiamondTrap::~DiamondTrap() {
-	std::cout << RED << "DiamondTrap " << this->_name << " destroyed" << RES << std::endl;
+	std::cout << RED << "DiamondTrap " << this->_name << " is snapped" << RES << std::endl;
 }
 
 DiamondTrap &DiamondTrap::operator=( DiamondTrap const &src ) {
