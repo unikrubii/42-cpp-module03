@@ -14,7 +14,7 @@ class ClapTrap
 		bool		_self;
 
 	public:
-		ClapTrap( std::string name );
+		ClapTrap( void );
 		ClapTrap( std::string name, int hp, int energy, int atk );
 		ClapTrap( ClapTrap const &src );
 		~ClapTrap( void );

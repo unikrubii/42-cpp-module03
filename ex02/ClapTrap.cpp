@@ -1,7 +1,7 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( std::string name ): _name( name ), _hp( 10 ), _energy( 10 ), _atk( 3 ) {
-	std::cout << CYN << "ClapTrap " << name << " has create" << RES << std::endl;
+ClapTrap::ClapTrap( void ): _name( "Unnamed" ), _hp( 10 ), _energy( 10 ), _atk( 3 ) {
+	std::cout << CYN << "ClapTrap Unnamed has create" << RES << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name, int hp, int energy, int atk ): _name( name ), _hp( hp ), _energy( energy ), _atk( atk ) {

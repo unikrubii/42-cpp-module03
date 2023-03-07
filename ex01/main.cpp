@@ -2,7 +2,8 @@
 
 int main( void ) {
 	ScavTrap	sc1( "sc1" );
-	ScavTrap	sc2( "sc2" );
+	ScavTrap	sc2( sc1 );
+	ScavTrap	sc3( void );
 	std::cout << std::endl;
 
 	sc1.attack( "sc2" );

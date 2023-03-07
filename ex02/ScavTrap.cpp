@@ -1,10 +1,16 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap( void ): ClapTrap() {
+	std::cout << BLU << "ScavTrap " << this->_name << " has entered" << RES << std::endl;
+}
+
 ScavTrap::ScavTrap( std::string name ): ClapTrap( name, 100, 50, 20 ) {
 	std::cout << BLU << "ScavTrap " << name << " has entered" << RES << std::endl;
 }
 
 ScavTrap::ScavTrap( ScavTrap const &src ): ClapTrap( src ) {
+	std::cout << BLU << "ScavTrap " << this->_name << " has been copied" << RES << std::endl;
+	*this = src;
 }
 
 ScavTrap::~ScavTrap( void ) {

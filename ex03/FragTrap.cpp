@@ -1,7 +1,7 @@
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap( void ): ClapTrap() {
-	std::cout << GRN << "FragTrap " << _name << " is coming to town!" << RES << std::endl;
+	std::cout << GRN << "FragTrap Unnamed is coming to town!" << RES << std::endl;
 }
 
 FragTrap::FragTrap( std::string name ): ClapTrap( name, 100, 100, 30 ) {

@@ -9,6 +9,7 @@ ClapTrap::ClapTrap( std::string name ): _name( name ), _hp( 10 ), _energy( 10 ),
 }
 
 ClapTrap::ClapTrap( ClapTrap const &src ) {
+	std::cout << CYN << "ClapTrap " << src._name << " has been copied" << RES << std::endl;
 	*this = src;
 }
 

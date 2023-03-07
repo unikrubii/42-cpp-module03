@@ -2,7 +2,7 @@
 
 int main( void ) {
 	FragTrap	ft1( "ft" );
-	FragTrap	ft2( "ft2" );
+	FragTrap	ft2( ft1 );
 	std::cout << std::endl;
 
 	ft1.attack( "ft2" );
